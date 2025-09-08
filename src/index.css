@@ -5,15 +5,20 @@
   --font-heading: "Playfair Display", serif;
   --font-body: "Inter", sans-serif;
 
-  --color-sage: #7a9b76;
-  --color-sage-light: #b5c9b1;
+  --color-sage: #70a983;
+  --color-sage-light: #87bd99;
   --color-navy: #7b8794;
   --color-navy-dark: #2c394b;
   --color-cream: #f5f2ed;
-  --color-beige: #e8e2da;
-  --color-beige-light: #ecebe8;
+  --color-beige: #faf8f4;
 
   --breakpoint-2xl: 1470px;
+
+  --gradient-sage: linear-gradient(
+    135deg,
+    var(--color-sage),
+    var(--color-sage-light)
+  );
 }
 
 body {
@@ -24,5 +29,13 @@ body {
 }
 
 @layer components {
-  /* placeholder */
+  .btn-primary {
+    /* biome-ignore lint: default */
+    @apply bg-(image:--gradient-sage) flex items-center gap-x-2 whitespace-nowrap rounded-md px-4 py-2 font-semibold text-sm text-white transition-all duration-300 hover:scale-102 hover:cursor-pointer hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light focus-visible:ring-offset-2 xl:text-base w-full justify-center lg:w-fit lg:justify-start hover:opacity-95;
+  }
+
+  .btn-secondary {
+    /* biome-ignore lint: default */
+    @apply bg-beige border border-zinc-200 text-sage flex items-center gap-x-2 whitespace-nowrap rounded-md px-4 py-2 font-semibold text-sm transition-all duration-300 hover:scale-102 hover:cursor-pointer hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light focus-visible:ring-offset-2 xl:text-base w-full justify-center lg:w-fit lg:justify-start hover:opacity-95;
+  }
 }

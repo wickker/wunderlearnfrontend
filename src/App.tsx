@@ -1,5 +1,14 @@
+import { Route, Routes } from "react-router"
+import Landing from "./pages/Landing"
+import NotFound from "./pages/NotFound"
+
 const App = () => {
-  return <div className="text-blue-500">Hello World</div>
+  return (
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  )
 }
 
 export default App

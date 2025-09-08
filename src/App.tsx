@@ -1,12 +1,15 @@
 import { Route, Routes } from "react-router"
-import Landing from "./pages/Landing"
-import NotFound from "./pages/NotFound"
+import Layout from "@/components/Layout"
+import Landing from "@/pages/Landing"
+import NotFound from "@/pages/NotFound"
 
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Landing />} />
-      <Route path="*" element={<NotFound />} />
+      <Route element={<Layout />}>
+        <Route path="/" element={<Landing />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
     </Routes>
   )
 }

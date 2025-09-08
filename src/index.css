@@ -4,14 +4,23 @@
 @theme {
   --font-heading: "Playfair Display", serif;
   --font-body: "Inter", sans-serif;
+
+  --color-sage: #7a9b76;
+  --color-sage-light: #b5c9b1;
+  --color-navy: #7b8794;
+  --color-navy-dark: #2c394b;
+  --color-cream: #f5f2ed;
+  --color-beige: #e8e2da;
+  --color-beige-light: #ecebe8;
 }
 
 body {
   font-family: var(--font-body);
   font-weight: 400;
   overflow-x: hidden;
+  color: var(--color-navy-dark);
 }
 
 @layer components {
-  /* Placeholder */
+  /* placeholder */
 }

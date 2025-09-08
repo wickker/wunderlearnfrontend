@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="grid min-w-full max-w-full place-items-center">
         <div className="group relative isolate">
           <img
-            src="https://placehold.co/800x600"
+            src="https://placehold.co/1000x800"
             alt="Wunderlearn"
             className="relative z-10 rounded-xl object-contain"
           />

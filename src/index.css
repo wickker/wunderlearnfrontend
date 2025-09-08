@@ -12,6 +12,8 @@
   --color-cream: #f5f2ed;
   --color-beige: #e8e2da;
   --color-beige-light: #ecebe8;
+
+  --breakpoint-2xl: 1470px;
 }
 
 body {

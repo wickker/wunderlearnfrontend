@@ -28,7 +28,7 @@ const ImageFrame = ({
 
       <div
         className={cn(
-          `-top-3 -right-3 absolute hidden w-[26%] justify-end rounded-xl bg-navy-dark p-4 text-right text-white transition-transform duration-300 sm:flex 2xl:group-hover:translate-x-[${translateRight}]`,
+          `-top-3 -right-3 absolute hidden w-[26%] justify-end rounded-xl bg-navy-dark p-4 text-right text-white transition-transform duration-300 sm:flex ${translateRight}`,
         )}
       >
         {rightNode}
@@ -36,7 +36,7 @@ const ImageFrame = ({
 
       <div
         className={cn(
-          `-bottom-3 -left-3 2xl:group-hover:-translate-x-[${translateLeft}] absolute hidden w-[26%] items-end rounded-xl bg-sage p-4 text-white transition-transform duration-300 sm:flex`,
+          `-bottom-3 -left-3 absolute hidden w-[26%] items-end rounded-xl bg-sage p-4 text-white transition-transform duration-300 sm:flex ${translateLeft}`,
         )}
       >
         {leftNode}

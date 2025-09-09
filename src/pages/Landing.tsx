@@ -1,7 +1,12 @@
-import { Hero } from '@/components/Landing'
+import { AboutEducator, Hero } from '@/components/Landing'
 
 const Landing = () => {
-  return <Hero />
+  return (
+    <>
+      <Hero />
+      <AboutEducator />
+    </>
+  )
 }
 
 export default Landing

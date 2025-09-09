@@ -25,7 +25,7 @@ const Hero = () => {
           <span className='text-sage'>Ex-MOE Teacher</span>
         </h1>
 
-        <p className='my-6 text-base text-zinc-500 xl:text-lg'>
+        <p className='my-6 text-base text-zinc-500 lg:text-lg'>
           Boutique small group classes (max 6-8 students) in our cosy learning
           space. Join Singapore's most trusted English and Humanities tuition
           for Primary and Secondary subjects.
@@ -73,8 +73,8 @@ const Hero = () => {
               <p className='text-xs opacity-75'>Geography</p>
             </div>
           }
-          translateRight='calc(65px+16px)'
-          translateLeft='calc(95px+16px)'
+          translateRight='2xl:group-hover:translate-x-[calc(65px+16px)]'
+          translateLeft='2xl:group-hover:-translate-x-[calc(95px+16px)]'
         />
       </div>
     </section>

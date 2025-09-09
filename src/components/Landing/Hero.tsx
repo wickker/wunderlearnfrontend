@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react'
+import { ImageFrame } from '@/components/commons'
 
 const statistics = [
   {
@@ -55,29 +56,26 @@ const Hero = () => {
       </div>
 
       <div className='grid min-w-full max-w-full place-items-center'>
-        <div className='group relative isolate'>
-          <img
-            src='https://placehold.co/1000x800'
-            alt='Wunderlearn'
-            className='relative z-10 rounded-xl object-contain'
-          />
-
-          <div className='-top-3 -right-3 absolute hidden w-[26%] justify-end rounded-xl bg-navy-dark p-4 text-right text-white transition-transform duration-300 sm:flex 2xl:group-hover:translate-x-[calc(65px+16px)]'>
+        <ImageFrame
+          imageUrl='https://placehold.co/1000x800'
+          imageAlt='Wunderlearn'
+          rightNode={
             <div className='overflow-hidden'>
               <p className='font-heading text-lg'>English</p>
               <p className='text-xs opacity-75'>Literature</p>
               <p className='text-xs opacity-75'>Language</p>
             </div>
-          </div>
-
-          <div className='-bottom-3 -left-3 2xl:group-hover:-translate-x-[calc(95px+16px)] absolute hidden w-[26%] items-end rounded-xl bg-sage p-4 text-white transition-transform duration-300 sm:flex'>
+          }
+          leftNode={
             <div className='overflow-hidden'>
               <p className='font-heading text-lg'>Humanities</p>
               <p className='text-xs opacity-75'>History</p>
               <p className='text-xs opacity-75'>Geography</p>
             </div>
-          </div>
-        </div>
+          }
+          translateRight='calc(65px+16px)'
+          translateLeft='calc(95px+16px)'
+        />
       </div>
     </section>
   )

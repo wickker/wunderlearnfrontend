@@ -1,11 +1,11 @@
-import tailwindcss from "@tailwindcss/vite"
-import react from "@vitejs/plugin-react-swc"
-import { defineConfig, loadEnv, type UserConfig } from "vite"
+import tailwindcss from '@tailwindcss/vite'
+import react from '@vitejs/plugin-react-swc'
+import { defineConfig, loadEnv, type UserConfig } from 'vite'
 
 export default defineConfig(({ mode }: UserConfig) => {
   if (!mode) return {}
 
-  const config = loadEnv(mode, process.cwd(), "")
+  const config = loadEnv(mode, process.cwd(), '')
 
   console.log(`🍀 Mode: ${mode}`)
   console.log(`🍀 Env: ${config.VITE_ENVIRONMENT}`)
@@ -17,7 +17,7 @@ export default defineConfig(({ mode }: UserConfig) => {
     },
     resolve: {
       alias: {
-        "@": "/src",
+        '@': '/src',
       },
     },
   }

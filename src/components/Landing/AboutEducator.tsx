@@ -76,7 +76,7 @@ const AboutEducator = () => {
                 key={bulletPoint.title}
                 className='grid grid-cols-[auto_1fr] gap-x-4'
               >
-                <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-sage/10'>
+                <div className='icon-container'>
                   <bulletPoint.icon className='h-6 w-6 text-sage' />
                 </div>
 

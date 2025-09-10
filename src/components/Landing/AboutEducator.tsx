@@ -26,7 +26,7 @@ const AboutEducator = () => {
   const isLargeScreen = useMediaQuery('(min-width: 1024px)')
 
   return (
-    <section className='flex w-full justify-center bg-beige'>
+    <section className='flex w-[100dvw] justify-center bg-beige'>
       <div className='grid w-full max-w-7xl grid-cols-1 items-center gap-6 px-6 py-18 lg:grid-cols-[1fr_1fr]'>
         <div className='grid min-w-full max-w-full place-items-center'>
           <ImageFrame

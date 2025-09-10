@@ -42,7 +42,7 @@ const Layout = () => {
         <LogoSvg height='26%' />
       </nav>
 
-      <div className='flex flex-col items-center overflow-y-auto'>
+      <div className='flex flex-col items-center overflow-y-auto overflow-x-hidden'>
         <Outlet />
       </div>
     </div>

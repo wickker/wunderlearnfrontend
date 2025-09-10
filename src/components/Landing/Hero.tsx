@@ -22,7 +22,7 @@ const Hero = () => {
   const isLargeScreen = useMediaQuery('(min-width: 1024px)')
 
   return (
-    <section className='grid max-w-7xl grid-cols-1 items-center gap-6 px-6 py-18 lg:grid-cols-[1fr_1fr]'>
+    <section className='mx-auto grid max-w-7xl grid-cols-1 items-center gap-6 px-6 py-18 lg:grid-cols-[1fr_1fr]'>
       <motion.div
         initial={{
           opacity: 0,

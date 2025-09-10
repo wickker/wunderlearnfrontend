@@ -64,6 +64,7 @@ const SubjectCard = ({ subject }: SubjectCardProps) => {
       <div className='space-y-4'>
         <h4 className='font-heading font-semibold text-xl'>{subject.name}</h4>
         <p className='text-zinc-500 leading-relaxed'>{subject.description}</p>
+
         <div className='space-y-3'>
           <h5 className='font-heading font-semibold text-sage text-sm'>
             Key Focus Areas:
@@ -89,7 +90,7 @@ const Subjects = () => {
   const isLargeScreen = useMediaQuery('(min-width: 1024px)')
 
   return (
-    <section className='flex w-full max-w-7xl flex-col items-center px-6 py-18'>
+    <section className='mx-auto flex w-full max-w-7xl flex-col items-center px-6 py-18'>
       <motion.div
         initial={{
           opacity: 0,
@@ -103,7 +104,7 @@ const Subjects = () => {
           Subjects We <span className='text-sage'>Excel In</span>
         </h2>
 
-        <p className='mt-4 mb-8 text-center text-base text-zinc-500 lg:text-l'>
+        <p className='mt-4 mb-10 text-center text-base text-zinc-500 lg:text-l'>
           Specialized tuition programs designed to build confidence and achieve
           academic excellence
         </p>
@@ -136,7 +137,7 @@ const Subjects = () => {
               Secondary Level
             </h3>
           </div>
-          <div className='grid grid-cols-1 gap-6 lg:grid-cols-2'>
+          <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>
             {secondarySubects.map((s) => (
               <SubjectCard key={s.name} subject={s} />
             ))}

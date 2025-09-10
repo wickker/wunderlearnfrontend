@@ -1,6 +1,5 @@
 import { BookOpen, PenTool } from 'lucide-react'
-import { motion } from 'motion/react'
-import { useMediaQuery } from 'usehooks-ts'
+import { EntryAnimation } from '@/components/commons'
 import { cn } from '@/utils/functions'
 
 type Subject = {
@@ -87,19 +86,9 @@ const SubjectCard = ({ subject }: SubjectCardProps) => {
 }
 
 const Subjects = () => {
-  const isLargeScreen = useMediaQuery('(min-width: 1024px)')
-
   return (
     <section className='mx-auto flex w-full max-w-7xl flex-col items-center px-6 py-18'>
-      <motion.div
-        initial={{
-          opacity: 0,
-          transform: isLargeScreen ? 'translateY(16px)' : 'translateY(0)',
-        }}
-        whileInView={{ opacity: 1, transform: 'translateY(0)' }}
-        viewport={{ amount: 'some', once: true }}
-        transition={{ duration: 0.5 }}
-      >
+      <EntryAnimation>
         <h2 className='text-center font-heading text-4xl lg:text-5xl'>
           Subjects We <span className='text-sage'>Excel In</span>
         </h2>
@@ -108,7 +97,7 @@ const Subjects = () => {
           Specialized tuition programs designed to build confidence and achieve
           academic excellence
         </p>
-      </motion.div>
+      </EntryAnimation>
 
       <div className='grid w-full grid-cols-1 gap-6 lg:grid-cols-[1fr_2fr]'>
         {/* Primary Section */}

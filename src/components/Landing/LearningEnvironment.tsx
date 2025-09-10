@@ -7,9 +7,8 @@ import {
   Shield,
   Users,
 } from 'lucide-react'
-import { motion } from 'motion/react'
 import { useMediaQuery } from 'usehooks-ts'
-import { ImageFrame } from '@/components/commons'
+import { EntryAnimation, ImageFrame } from '@/components/commons'
 
 const highlights = [
   'Natural lighting and climate-controlled comfort',
@@ -55,20 +54,12 @@ const points = [
 ] as const
 
 const LearningEnvironment = () => {
-  const isLargeScreen = useMediaQuery('(min-width: 1024px)')
+  const _isLargeScreen = useMediaQuery('(min-width: 1024px)')
 
   return (
     <section className='flex w-[100dvw] justify-center bg-beige'>
       <div className='w-full max-w-7xl px-6 py-18'>
-        <motion.div
-          initial={{
-            opacity: 0,
-            transform: isLargeScreen ? 'translateY(16px)' : 'translateY(0)',
-          }}
-          whileInView={{ opacity: 1, transform: 'translateY(0)' }}
-          viewport={{ amount: 'some', once: true }}
-          transition={{ duration: 0.5 }}
-        >
+        <EntryAnimation>
           <h2 className='text-center font-heading text-4xl lg:text-5xl'>
             The <span className='text-sage'>Boutique</span> Learning Environment
           </h2>
@@ -77,10 +68,10 @@ const LearningEnvironment = () => {
             Step into a thoughtfully designed space where academic excellence
             meets comfort and inspiration
           </p>
-        </motion.div>
+        </EntryAnimation>
 
         <section className='grid w-full grid-cols-1 gap-6 lg:grid-cols-[1fr_1fr] 2xl:gap-24'>
-          <div className='flex justify-center'>
+          <div className='flex items-center justify-center'>
             <ImageFrame
               imageUrl='https://placehold.co/800x600'
               imageAlt='Wunderlearn classroom'
@@ -103,15 +94,7 @@ const LearningEnvironment = () => {
             />
           </div>
 
-          <motion.div
-            initial={{
-              opacity: 0,
-              transform: isLargeScreen ? 'translateY(16px)' : 'translateY(0)',
-            }}
-            whileInView={{ opacity: 1, transform: 'translateY(0)' }}
-            viewport={{ amount: 'some', once: true }}
-            transition={{ duration: 0.5 }}
-          >
+          <EntryAnimation>
             <h3 className='font-heading text-3xl lg:text-4xl'>
               Where Learning Meets <span className='text-sage'>Luxury</span>
             </h3>
@@ -137,20 +120,11 @@ const LearningEnvironment = () => {
                 ))}
               </ul>
             </article>
-          </motion.div>
+          </EntryAnimation>
         </section>
 
         {/* 6 Key Points */}
-        <motion.section
-          className='mt-10 grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'
-          initial={{
-            opacity: 0,
-            transform: isLargeScreen ? 'translateY(16px)' : 'translateY(0)',
-          }}
-          whileInView={{ opacity: 1, transform: 'translateY(0)' }}
-          viewport={{ amount: 'some', once: true }}
-          transition={{ duration: 0.5 }}
-        >
+        <EntryAnimation>
           {points.map((p) => (
             <article
               key={p.title}
@@ -167,7 +141,7 @@ const LearningEnvironment = () => {
               </p>
             </article>
           ))}
-        </motion.section>
+        </EntryAnimation>
       </div>
     </section>
   )

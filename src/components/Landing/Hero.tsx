@@ -1,7 +1,5 @@
 import { ArrowRight } from 'lucide-react'
-import { motion } from 'motion/react'
-import { useMediaQuery } from 'usehooks-ts'
-import { ImageFrame } from '@/components/commons'
+import { EntryAnimation, ImageFrame } from '@/components/commons'
 
 const statistics = [
   {
@@ -19,19 +17,9 @@ const statistics = [
 ] as const
 
 const Hero = () => {
-  const isLargeScreen = useMediaQuery('(min-width: 1024px)')
-
   return (
     <section className='mx-auto grid max-w-7xl grid-cols-1 items-center gap-6 px-6 py-18 lg:grid-cols-[1fr_1fr]'>
-      <motion.div
-        initial={{
-          opacity: 0,
-          transform: isLargeScreen ? 'translateY(16px)' : 'translateY(0)',
-        }}
-        whileInView={{ opacity: 1, transform: 'translateY(0)' }}
-        viewport={{ amount: 'some', once: true }}
-        transition={{ duration: 0.5 }}
-      >
+      <EntryAnimation>
         <h1 className='font-heading text-5xl lg:text-6xl'>
           Premium English & Humanities Tutition by{' '}
           <span className='text-sage'>Ex-MOE Teacher</span>
@@ -65,7 +53,7 @@ const Hero = () => {
             </article>
           ))}
         </div>
-      </motion.div>
+      </EntryAnimation>
 
       <div className='grid min-w-full max-w-full place-items-center'>
         <ImageFrame

@@ -2,6 +2,7 @@ import {
   AboutEducator,
   Hero,
   LearningEnvironment,
+  Reviews,
   Subjects,
 } from '@/components/Landing'
 
@@ -12,6 +13,7 @@ const Landing = () => {
       <AboutEducator />
       <Subjects />
       <LearningEnvironment />
+      <Reviews />
     </main>
   )
 }

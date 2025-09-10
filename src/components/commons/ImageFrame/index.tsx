@@ -19,7 +19,7 @@ const ImageFrame = ({
   translateLeft,
 }: ImageFrameProps) => {
   return (
-    <div className='group relative isolate'>
+    <figure className='group relative isolate'>
       <img
         src={imageUrl}
         alt={imageAlt}
@@ -41,7 +41,7 @@ const ImageFrame = ({
       >
         {leftNode}
       </div>
-    </div>
+    </figure>
   )
 }
 

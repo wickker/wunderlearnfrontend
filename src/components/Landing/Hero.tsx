@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react'
+import { motion } from 'motion/react'
 import { ImageFrame } from '@/components/commons'
 
 const statistics = [
@@ -19,7 +20,12 @@ const statistics = [
 const Hero = () => {
   return (
     <section className='grid max-w-7xl grid-cols-1 items-center gap-6 px-6 py-12 lg:grid-cols-[1fr_1fr]'>
-      <div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ amount: 'some', once: true }}
+        transition={{ duration: 0.5 }}
+      >
         <h1 className='font-heading text-5xl lg:text-6xl'>
           Premium English & Humanities Tutition by{' '}
           <span className='text-sage'>Ex-MOE Teacher</span>
@@ -44,16 +50,16 @@ const Hero = () => {
 
         <div className='mt-8 flex flex-nowrap items-center gap-x-6'>
           {statistics.map((s) => (
-            <div
+            <article
               key={s.metric}
               className='flex flex-col items-center text-center'
             >
               <p className='font-heading text-2xl text-sage'>{s.value}</p>
               <p className='text-sm text-zinc-500'>{s.metric}</p>
-            </div>
+            </article>
           ))}
         </div>
-      </div>
+      </motion.div>
 
       <div className='grid min-w-full max-w-full place-items-center'>
         <ImageFrame

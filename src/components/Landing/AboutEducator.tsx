@@ -1,4 +1,5 @@
 import { Award, BookOpen, Star, Users } from 'lucide-react'
+import { motion } from 'motion/react'
 import { ImageFrame } from '@/components/commons'
 
 const bulletPoints = [
@@ -47,7 +48,12 @@ const AboutEducator = () => {
           />
         </div>
 
-        <div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ amount: 'some', once: true }}
+          transition={{ duration: 0.5 }}
+        >
           <h2 className='font-heading text-4xl lg:text-5xl'>
             Meet Your <span className='text-sage'>Dedicated Educator</span>
           </h2>
@@ -60,7 +66,7 @@ const AboutEducator = () => {
 
           <div className='flex flex-col gap-y-6'>
             {bulletPoints.map((bulletPoint) => (
-              <div
+              <article
                 key={bulletPoint.title}
                 className='grid grid-cols-[auto_1fr] gap-x-4'
               >
@@ -76,10 +82,10 @@ const AboutEducator = () => {
                     {bulletPoint.description}
                   </p>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

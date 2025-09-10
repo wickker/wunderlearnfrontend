@@ -1,3 +1,4 @@
+import { useScroll } from 'motion/react'
 import { useEffect } from 'react'
 import { cn } from '@/utils/functions'
 
@@ -12,15 +13,19 @@ const LogoSvg = ({
   height = '114',
   className,
 }: LogoSvgProps) => {
+  const { scrollYProgress } = useScroll()
+
   useEffect(() => {
     const paths = document.querySelectorAll('.logo-path')
     for (let i = 0; i < paths.length; i++) {
       const path = paths[i] as SVGPathElement
-      path.style.fill = 'none'
-      path.style.animation = `1s draw-svg forwards ease-in-out`
-      path.style.animationDelay = `${i * 0.1}s`
+      if (scrollYProgress.get() === 0) {
+        path.style.fill = 'none'
+        path.style.animation = `draw-svg forwards ease-in-out`
+        path.style.animationDelay = `${i * 0.1}s`
+      }
     }
-  }, [])
+  }, [scrollYProgress.get])
 
   return (
     <svg

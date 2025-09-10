@@ -1,5 +1,6 @@
 import { Award, BookOpen, Star, Users } from 'lucide-react'
 import { motion } from 'motion/react'
+import { useMediaQuery } from 'usehooks-ts'
 import { ImageFrame } from '@/components/commons'
 
 const bulletPoints = [
@@ -22,6 +23,8 @@ const bulletPoints = [
 ] as const
 
 const AboutEducator = () => {
+  const isLargeScreen = useMediaQuery('(min-width: 1024px)')
+
   return (
     <section className='flex w-full justify-center bg-beige'>
       <div className='grid w-full max-w-7xl grid-cols-1 items-center gap-6 px-6 py-12 lg:grid-cols-[1fr_1fr]'>
@@ -49,8 +52,11 @@ const AboutEducator = () => {
         </div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{
+            opacity: 0,
+            transform: isLargeScreen ? 'translateY(16px)' : 'translateY(0)',
+          }}
+          whileInView={{ opacity: 1, transform: 'translateY(0)' }}
           viewport={{ amount: 'some', once: true }}
           transition={{ duration: 0.5 }}
         >

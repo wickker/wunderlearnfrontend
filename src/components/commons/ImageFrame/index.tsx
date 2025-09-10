@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import { type ReactNode, useState } from 'react'
 import { cn } from '@/utils/functions'
 
 type ImageFrameProps = {
@@ -18,12 +18,21 @@ const ImageFrame = ({
   translateRight,
   translateLeft,
 }: ImageFrameProps) => {
+  // TODO: Add a loading state
+  const [isLoaded, setIsLoaded] = useState(false)
+
   return (
-    <figure className='group relative isolate'>
+    <figure
+      className={cn(
+        'group relative isolate transition-opacity duration-300',
+        isLoaded ? 'opacity-100' : 'opacity-0',
+      )}
+    >
       <img
         src={imageUrl}
         alt={imageAlt}
         className='relative rounded-xl object-contain 2xl:z-10'
+        onLoad={() => setIsLoaded(true)}
       />
 
       <div

@@ -7,7 +7,6 @@ import {
   Shield,
   Users,
 } from 'lucide-react'
-import { useMediaQuery } from 'usehooks-ts'
 import { EntryAnimation, ImageFrame } from '@/components/commons'
 
 const highlights = [
@@ -54,8 +53,6 @@ const points = [
 ] as const
 
 const LearningEnvironment = () => {
-  const _isLargeScreen = useMediaQuery('(min-width: 1024px)')
-
   return (
     <section className='flex w-[100dvw] justify-center bg-beige'>
       <div className='w-full max-w-7xl px-6 py-18'>
@@ -125,22 +122,24 @@ const LearningEnvironment = () => {
 
         {/* 6 Key Points */}
         <EntryAnimation>
-          {points.map((p) => (
-            <article
-              key={p.title}
-              className='flex flex-col items-center justify-center gap-4 rounded-lg border border-zinc-200 bg-beige-light p-8'
-            >
-              <div className='icon-container'>
-                <p.icon className='h-8 w-8 text-sage' />
-              </div>
-              <h4 className='text-center font-heading font-semibold lg:text-lg'>
-                {p.title}
-              </h4>
-              <p className='text-center text-sm text-zinc-500'>
-                {p.description}
-              </p>
-            </article>
-          ))}
+          <section className='mt-10 grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
+            {points.map((p) => (
+              <article
+                key={p.title}
+                className='flex flex-col items-center justify-center gap-4 rounded-lg border border-zinc-200 bg-beige-light p-8'
+              >
+                <div className='icon-container'>
+                  <p.icon className='h-8 w-8 text-sage' />
+                </div>
+                <h4 className='text-center font-heading font-semibold lg:text-lg'>
+                  {p.title}
+                </h4>
+                <p className='text-center text-sm text-zinc-500'>
+                  {p.description}
+                </p>
+              </article>
+            ))}
+          </section>
         </EntryAnimation>
       </div>
     </section>

@@ -23,7 +23,7 @@ const ImageFrame = ({
       <img
         src={imageUrl}
         alt={imageAlt}
-        className='relative z-10 rounded-xl object-contain'
+        className='relative rounded-xl object-contain 2xl:z-10'
       />
 
       <div

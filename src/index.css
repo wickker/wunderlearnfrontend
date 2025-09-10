@@ -28,6 +28,18 @@ body {
   color: var(--color-navy-dark);
 }
 
+@keyframes draw-svg {
+  40% {
+    fill: transparent;
+  }
+  60% {
+    fill: var(--color-navy-dark);
+  }
+  100% {
+    fill: var(--color-navy-dark);
+  }
+}
+
 @layer components {
   .btn-primary {
     /* biome-ignore lint: default */

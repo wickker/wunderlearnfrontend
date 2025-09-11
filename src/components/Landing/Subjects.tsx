@@ -126,7 +126,7 @@ const Subjects = () => {
               Secondary Level
             </h3>
           </div>
-          <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>
+          <div className='grid grid-cols-1 gap-6 md:grid-cols-[1fr_1fr]'>
             {secondarySubects.map((s) => (
               <SubjectCard key={s.name} subject={s} />
             ))}

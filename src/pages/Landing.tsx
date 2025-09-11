@@ -4,6 +4,7 @@ import {
   LearningEnvironment,
   Reviews,
   Subjects,
+  WhyChooseUs,
 } from '@/components/Landing'
 
 const Landing = () => {
@@ -14,6 +15,7 @@ const Landing = () => {
       <Subjects />
       <LearningEnvironment />
       <Reviews />
+      <WhyChooseUs />
     </main>
   )
 }

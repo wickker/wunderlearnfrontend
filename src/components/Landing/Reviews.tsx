@@ -146,13 +146,13 @@ const Reviews = () => {
       </section>
 
       {/* Mobile */}
-      <div className='grid grid-cols-1 items-stretch gap-6 md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr] xl:hidden'>
-        {reviews.map((review) => (
-          <ReviewCard key={review.name} review={review} />
-        ))}
-      </div>
-
       <EntryAnimation>
+        <div className='grid grid-cols-1 items-stretch gap-6 md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr] xl:hidden'>
+          {reviews.map((review) => (
+            <ReviewCard key={review.name} review={review} />
+          ))}
+        </div>
+
         <div className='mx-auto max-w-2xl rounded-lg bg-sage p-8 text-cream'>
           <div className='space-y-4 text-center'>
             <h3 className='font-heading font-medium text-2xl'>

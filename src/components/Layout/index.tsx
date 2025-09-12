@@ -71,7 +71,7 @@ const Layout = () => {
         {/* Mobile */}
         <div className='isolate grid h-18 w-full grid-cols-1 sm:hidden'>
           <div
-            className='z-10 col-start-1 row-start-1 grid h-18 grid-cols-3 px-6'
+            className='z-10 col-start-1 row-start-1 grid h-18 grid-cols-[1fr_auto_1fr] px-6'
             style={{
               background: `${bg}`,
             }}

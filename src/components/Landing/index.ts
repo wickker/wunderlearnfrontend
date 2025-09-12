@@ -1,4 +1,5 @@
 export { default as AboutEducator } from './AboutEducator'
+export { default as CtaAndContact } from './CtaAndContact'
 export { default as Hero } from './Hero'
 export { default as LearningEnvironment } from './LearningEnvironment'
 export { default as Reviews } from './Reviews'

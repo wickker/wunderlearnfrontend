@@ -171,7 +171,7 @@ const WhyChooseUs = () => {
                 <ul className='flex flex-col space-y-3 lg:items-center'>
                   {cons.map((item) => (
                     <li key={item} className='flex items-start space-x-3'>
-                      <div className='mt-0.5 h-5 w-5 flex-shrink-0 rounded-full border-2 border-zinc-500/30'></div>
+                      <div className='mt-0.5 h-5 w-5 flex-shrink-0 rounded-full border-2 border-zinc-500/30' />
                       <span className='text-zinc-500/70'>{item}</span>
                     </li>
                   ))}

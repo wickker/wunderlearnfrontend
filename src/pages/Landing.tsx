@@ -1,5 +1,6 @@
 import {
   AboutEducator,
+  CtaAndContact,
   Hero,
   LearningEnvironment,
   Reviews,
@@ -16,6 +17,7 @@ const Landing = () => {
       <LearningEnvironment />
       <Reviews />
       <WhyChooseUs />
+      <CtaAndContact />
     </main>
   )
 }

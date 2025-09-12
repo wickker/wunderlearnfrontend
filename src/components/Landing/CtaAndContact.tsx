@@ -30,7 +30,11 @@ const contacts = [
 
 const CtaAndContact = () => {
   return (
-    <section className='flex w-[100dvw] flex-col items-center justify-center bg-navy'>
+    /* biome-ignore lint: default */
+    <section
+      className='flex w-[100dvw] flex-col items-center justify-center bg-navy'
+      id='contact'
+    >
       <div className='w-full max-w-5xl px-6 py-18'>
         <EntryAnimation>
           <h2 className='mb-8 text-center font-heading text-4xl text-cream lg:text-5xl'>

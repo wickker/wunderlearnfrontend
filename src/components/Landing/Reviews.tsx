@@ -153,6 +153,7 @@ const Reviews = () => {
           ))}
         </div>
 
+        {/* CTA */}
         <div className='mx-auto mt-6 max-w-2xl rounded-lg bg-sage p-8 text-cream'>
           <div className='space-y-4 text-center'>
             <h3 className='font-heading font-medium text-2xl'>

@@ -69,27 +69,33 @@ const Layout = () => {
         </div>
 
         {/* Mobile */}
-        <div className='flex h-18 w-full items-center justify-between px-6 sm:hidden'>
-          <button
-            className='cursor-pointer transition-transform hover:scale-105'
+        <div className='isolate grid h-18 w-full grid-cols-1 sm:hidden'>
+          <div
+            className='z-10 col-start-1 row-start-1 grid h-18 grid-cols-3 px-6'
             style={{
-              color: `${text}`,
+              background: `${bg}`,
             }}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            type='button'
           >
-            <Menu className='h-6 w-6' />
-          </button>
-          <a href='#top'>
-            <LogoSvg width='160px' />
-          </a>
-          <div className='h-6 w-6' />
+            <button
+              className='cursor-pointer transition-transform hover:scale-105'
+              style={{
+                color: `${text}`,
+              }}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              type='button'
+            >
+              <Menu className='h-6 w-6' />
+            </button>
+            <a href='#top'>
+              <LogoSvg width='160px' height='72px' />
+            </a>
+          </div>
 
-          {/* Mobile Menu */}
+          {/* Mobile Dropdown */}
           <div
             className={cn(
-              'absolute top-18 left-0 flex h-[112px] max-h-0 w-full flex-col overflow-hidden bg-pink-100 shadow-premium transition-all duration-300',
-              isMobileMenuOpen && 'max-h-[300px]',
+              '-translate-y-[112px] col-start-1 row-start-1 shadow-premium transition-transform',
+              isMobileMenuOpen && 'translate-y-[72px]',
             )}
             style={{
               background: `${bg}`,

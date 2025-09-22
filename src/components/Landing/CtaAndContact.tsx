@@ -106,7 +106,7 @@ const CtaAndContact = () => {
       </div>
 
       <div className='h-[1px] w-[94%] bg-zinc-300/50' />
-      <div className='mx-auto p-3 text-cream text-sm'>
+      <div className='mx-auto p-3 text-center text-cream text-sm'>
         Copyright © {new Date().getFullYear()} Wunderlearn. Made with 💜 in
         Singapore.
       </div>

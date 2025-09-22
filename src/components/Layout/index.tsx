@@ -124,7 +124,7 @@ const Layout = () => {
         <Outlet />
 
         <button
-          className='fixed right-8 bottom-8 flex items-center gap-x-2 rounded-full bg-[#22CE62] px-6 py-3 text-white shadow-premium transition-all duration-200 hover:scale-102 hover:cursor-pointer hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light focus-visible:ring-offset-2'
+          className='fixed right-4 bottom-4 flex items-center gap-x-2 rounded-full bg-[#22CE62] px-6 py-3 text-white shadow-premium transition-all duration-200 hover:scale-102 hover:cursor-pointer hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light focus-visible:ring-offset-2 lg:right-8 lg:bottom-8'
           type='button'
         >
           <svg

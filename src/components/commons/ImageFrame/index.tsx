@@ -19,7 +19,6 @@ const ImageFrame = ({
   translateRight,
   translateLeft,
 }: ImageFrameProps) => {
-  // TODO: Add a visible loading state
   const [isLoaded, setIsLoaded] = useState(false)
 
   return (

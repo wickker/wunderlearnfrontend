@@ -21,7 +21,7 @@ const Hero = () => {
     <section className='mx-auto grid max-w-7xl grid-cols-1 items-center gap-6 px-6 py-18 lg:grid-cols-[1fr_1fr]'>
       <EntryAnimation>
         <h1 className='font-heading text-5xl lg:text-6xl'>
-          Premium English & Humanities Tutition by{' '}
+          Premium English & Humanities Tuition by{' '}
           <span className='text-sage'>Ex-MOE Teacher</span>
         </h1>
 

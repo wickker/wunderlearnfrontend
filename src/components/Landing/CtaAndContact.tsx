@@ -32,7 +32,7 @@ const CtaAndContact = () => {
   return (
     /* biome-ignore lint: default */
     <section
-      className='flex w-[100dvw] flex-col items-center justify-center bg-navy'
+      className='flex w-[100dvw] scroll-mt-18 flex-col items-center justify-center bg-navy'
       id='contact'
     >
       <div className='w-full max-w-5xl px-6 py-18'>

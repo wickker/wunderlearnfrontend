@@ -1,9 +1,19 @@
-import { Menu } from 'lucide-react'
 import { useMotionValueEvent, useScroll } from 'motion/react'
 import { useState } from 'react'
 import { Outlet } from 'react-router'
-import { LogoSvg } from '@/components/commons'
-import { cn } from '@/utils/functions'
+import DesktopHeader from './DesktopHeader'
+import MobileHeader from './MobileHeader'
+
+const navItems = [
+  {
+    label: 'Why Choose Us',
+    href: '#why-choose-us',
+  },
+  {
+    label: 'Contact',
+    href: '#contact',
+  },
+] as const
 
 const interpolateColor = (start: number[], end: number[], t: number) =>
   start.map((s, i) => Math.round(s + (end[i] - s) * t))
@@ -11,7 +21,6 @@ const interpolateColor = (start: number[], end: number[], t: number) =>
 const Layout = () => {
   const [bg, setBg] = useState('var(--color-cream)')
   const [text, setText] = useState('var(--color-navy-dark)')
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const { scrollY } = useScroll()
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
@@ -45,84 +54,14 @@ const Layout = () => {
           background: `${bg}`,
         }}
       >
-        {/* Desktop */}
-        <div className='mx-auto hidden h-18 w-full max-w-7xl items-center justify-between px-6 sm:flex'>
-          <a href='#top'>
-            <LogoSvg width='160px' />
-          </a>
-          <div
-            className='flex items-center gap-x-10 font-medium'
-            style={{
-              color: `${text}`,
-            }}
-          >
-            <a
-              href='#why-choose-us'
-              className='transition-transform hover:scale-105'
-            >
-              Why Choose Us
-            </a>
-            <a href='#contact' className='transition-transform hover:scale-105'>
-              Contact
-            </a>
-          </div>
-        </div>
-
-        {/* Mobile */}
-        <div className='isolate grid h-18 w-full grid-cols-1 sm:hidden'>
-          <div
-            className='z-10 col-start-1 row-start-1 grid h-18 grid-cols-[1fr_auto_1fr] px-6'
-            style={{
-              background: `${bg}`,
-            }}
-          >
-            <button
-              className='cursor-pointer transition-transform hover:scale-105'
-              style={{
-                color: `${text}`,
-              }}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              type='button'
-            >
-              <Menu className='h-6 w-6' />
-            </button>
-            <a href='#top'>
-              <LogoSvg width='160px' height='72px' />
-            </a>
-          </div>
-
-          {/* Mobile Dropdown */}
-          <div
-            className={cn(
-              '-translate-y-[112px] col-start-1 row-start-1 shadow-premium transition-transform',
-              isMobileMenuOpen && 'translate-y-[72px]',
-            )}
-            style={{
-              background: `${bg}`,
-            }}
-          >
-            {/* biome-ignore lint: default */}
-            <div
-              className='flex flex-col gap-y-4 p-6 font-medium'
-              style={{
-                color: `${text}`,
-              }}
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <a href='#why-choose-us' className='w-fit'>
-                Why Choose Us
-              </a>
-              <a href='#contact' className='w-fit'>
-                Contact
-              </a>
-            </div>
-          </div>
-        </div>
+        <DesktopHeader textColor={text} navItems={navItems} />
+        <MobileHeader bgColor={bg} textColor={text} navItems={navItems} />
       </nav>
 
       <div className='relative flex flex-col items-center overflow-y-auto overflow-x-hidden'>
         <Outlet />
 
+        {/* WhatsApp Button */}
         <button
           className='fixed right-4 bottom-4 flex items-center gap-x-2 rounded-full bg-[#22CE62] px-6 py-3 text-white shadow-premium transition-all duration-200 hover:scale-102 hover:cursor-pointer hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-light focus-visible:ring-offset-2 lg:right-8 lg:bottom-8'
           type='button'

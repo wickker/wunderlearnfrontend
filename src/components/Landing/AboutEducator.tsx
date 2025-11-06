@@ -22,7 +22,11 @@ const bulletPoints = [
 
 const AboutEducator = () => {
   return (
-    <section className='flex w-[100dvw] justify-center bg-beige'>
+    /* biome-ignore lint: default */
+    <section
+      className='flex w-[100dvw] scroll-mt-18 justify-center bg-beige'
+      id='about-educator'
+    >
       <div className='grid w-full max-w-7xl grid-cols-1 items-center gap-6 px-6 py-18 lg:grid-cols-[1fr_1fr]'>
         <div className='grid min-w-full max-w-full place-items-center'>
           <ImageFrame

@@ -96,7 +96,7 @@ const WhyChooseUs = () => {
   return (
     /* biome-ignore lint: default */
     <section
-      className='flex w-[100dvw] justify-center bg-beige'
+      className='flex w-[100dvw] scroll-mt-18 justify-center bg-beige'
       id='why-choose-us'
     >
       <div className='w-full max-w-7xl px-6 py-18'>

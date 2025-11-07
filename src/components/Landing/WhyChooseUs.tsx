@@ -13,7 +13,7 @@ import { Chip, EntryAnimation } from '@/components/commons'
 const metrics = [
   {
     label: 'Years MOE Experience',
-    value: '8+',
+    value: '12+',
   },
   {
     label: 'Student Improvement',
@@ -34,7 +34,7 @@ const reasons = [
     icon: Award,
     title: 'Ex-MOE Teacher Expertise',
     description:
-      "8+ years of Ministry of Education experience with deep understanding of Singapore's curriculum and examination requirements.",
+      "12+ years of Ministry of Education experience with deep understanding of Singapore's curriculum and examination requirements.",
     highlight: 'MOE Certified',
   },
   {
@@ -76,7 +76,7 @@ const reasons = [
 
 const pros = [
   'Maximum 8 students per class',
-  'Ex-MOE teacher with 8+ years experience',
+  'Ex-MOE teacher with 12+ years experience',
   'Premium, comfortable learning environment',
   'Personalized attention for every student',
   'Flexible scheduling options',

@@ -57,7 +57,7 @@ const AboutEducator = () => {
           </h2>
 
           <p className='my-6 text-base text-zinc-500 lg:text-lg'>
-            With over 8 years of experience as a Ministry of Education teacher,
+            With over 12 years of experience as a Ministry of Education teacher,
             I've witnessed firsthand the transformative power of personalized
             education in small, nurturing environments.
           </p>

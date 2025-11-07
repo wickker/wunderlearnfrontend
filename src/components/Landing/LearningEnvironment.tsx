@@ -71,7 +71,7 @@ const LearningEnvironment = () => {
           <div className='flex items-center justify-center'>
             <ImageFrame
               imageUrl='https://placehold.co/800x600'
-              imageAlt='Wunderlearn classroom'
+              imageAlt='Wunderlearn'
               rightNode={
                 <div className='flex flex-col items-end overflow-hidden'>
                   <Users className='mb-2 h-8 w-8' />

@@ -17,21 +17,21 @@ const statistics = [
 ] as const
 
 const Hero = () => {
-  // TODO: Add poster="fallback.jpg"
-
   return (
-    <section className='relative isolate mx-auto grid w-full grid-cols-1 lg:min-h-[calc(100dvh-72px)]'>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload='auto'
-        className='col-start-1 row-start-1 h-full w-full object-cover object-center'
-      >
-        <source src='promo.mp4' type='video/mp4' />
-        Your browser does not support the video tag.
-      </video>
+    <section className='isolate mx-auto grid w-full grid-cols-1 lg:h-[calc(100dvh-72px)]'>
+      <div className='col-start-1 row-start-1 h-full w-full overflow-hidden'>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload='auto'
+          poster='hero_fallback.png'
+          className='h-full w-full object-cover object-center'
+        >
+          <source src='promo.mp4' type='video/mp4' />
+        </video>
+      </div>
 
       <div className='z-10 col-start-1 row-start-1 flex flex-col justify-center bg-black/50 px-6 py-18 text-white lg:bg-black/40 lg:px-12'>
         <div className='lg:max-w-[50%]'>

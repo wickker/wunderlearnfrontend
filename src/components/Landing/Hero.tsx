@@ -1,6 +1,8 @@
 import { ArrowDown, ArrowRight } from 'lucide-react'
+import { useState } from 'react'
 import { EntryAnimation } from '@/components/commons'
 import { WHATSAPP_LINK } from '@/utils/constants'
+import { cn } from '@/utils/functions'
 
 const statistics = [
   {
@@ -18,6 +20,8 @@ const statistics = [
 ] as const
 
 const Hero = () => {
+  const [isLoaded, setIsLoaded] = useState(false)
+
   return (
     <section className='isolate mx-auto grid w-full grid-cols-1 lg:h-[calc(100dvh-72px)]'>
       <div className='col-start-1 row-start-1 h-full w-full overflow-hidden'>
@@ -28,7 +32,11 @@ const Hero = () => {
           playsInline
           preload='auto'
           poster='hero_fallback.png'
-          className='h-full w-full object-cover object-center'
+          className={cn(
+            'h-full w-full object-cover object-center',
+            isLoaded ? 'opacity-100' : 'opacity-0',
+          )}
+          onLoadedData={() => setIsLoaded(true)}
         >
           <source src='promo.mp4' type='video/mp4' />
         </video>

@@ -1,5 +1,6 @@
 import { ArrowRight, Clock, Mail, MapPin, Phone } from 'lucide-react'
 import { EntryAnimation } from '@/components/commons'
+import { WHATSAPP_LINK } from '@/utils/constants'
 
 const contacts = [
   {
@@ -52,9 +53,15 @@ const CtaAndContact = () => {
               <ArrowRight className='ml-2 h-4 w-4 transition-transform group-hover:translate-x-1' />
             </button>
 
-            <button className='btn-secondary' type='button'>
+            <a
+              className='btn-secondary'
+              type='button'
+              href={WHATSAPP_LINK}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               Book Trial Lesson
-            </button>
+            </a>
           </div>
 
           {/* Urgency Indicator */}

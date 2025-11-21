@@ -1,14 +1,5 @@
-import {
-  Award,
-  BookOpen,
-  CheckCircle,
-  Clock,
-  Heart,
-  Target,
-  Trophy,
-  Users,
-} from 'lucide-react'
-import { Chip, EntryAnimation } from '@/components/commons'
+import { CheckCircle, Trophy } from 'lucide-react'
+import { EntryAnimation } from '@/components/commons'
 
 const metrics = [
   {
@@ -29,50 +20,50 @@ const metrics = [
   },
 ] as const
 
-const reasons = [
-  {
-    icon: Award,
-    title: 'Ex-MOE Teacher Expertise',
-    description:
-      "12+ years of Ministry of Education experience with deep understanding of Singapore's curriculum and examination requirements.",
-    highlight: 'MOE Certified',
-  },
-  {
-    icon: Users,
-    title: 'Intimate Class Sizes',
-    description:
-      'Maximum 8 students per class ensures every student receives personalized attention and tailored learning strategies.',
-    highlight: 'Max 8 Students',
-  },
-  {
-    icon: Target,
-    title: 'Proven Track Record',
-    description:
-      '100% of our students show measurable improvement in their grades, with majority achieving their target examination results.',
-    highlight: '100% Improvement',
-  },
-  {
-    icon: Heart,
-    title: 'Boutique Experience',
-    description:
-      'Premium learning environment designed for comfort and focus, moving away from typical tuition centre atmospheres.',
-    highlight: 'Premium Environment',
-  },
-  {
-    icon: Clock,
-    title: 'Flexible Scheduling',
-    description:
-      'Weekend and evening slots available to accommodate busy student schedules without compromising on quality.',
-    highlight: 'Flexible Timing',
-  },
-  {
-    icon: BookOpen,
-    title: 'Comprehensive Coverage',
-    description:
-      'From Primary English to Secondary Humanities, we offer specialized programs for different learning levels and needs.',
-    highlight: 'Full Curriculum',
-  },
-] as const
+// const reasons = [
+//   {
+//     icon: Award,
+//     title: 'Ex-MOE Teacher Expertise',
+//     description:
+//       "12+ years of Ministry of Education experience with deep understanding of Singapore's curriculum and examination requirements.",
+//     highlight: 'MOE Certified',
+//   },
+//   {
+//     icon: Users,
+//     title: 'Intimate Class Sizes',
+//     description:
+//       'Maximum 8 students per class ensures every student receives personalized attention and tailored learning strategies.',
+//     highlight: 'Max 8 Students',
+//   },
+//   {
+//     icon: Target,
+//     title: 'Proven Track Record',
+//     description:
+//       '100% of our students show measurable improvement in their grades, with majority achieving their target examination results.',
+//     highlight: '100% Improvement',
+//   },
+//   {
+//     icon: Heart,
+//     title: 'Boutique Experience',
+//     description:
+//       'Premium learning environment designed for comfort and focus, moving away from typical tuition centre atmospheres.',
+//     highlight: 'Premium Environment',
+//   },
+//   {
+//     icon: Clock,
+//     title: 'Flexible Scheduling',
+//     description:
+//       'Weekend and evening slots available to accommodate busy student schedules without compromising on quality.',
+//     highlight: 'Flexible Timing',
+//   },
+//   {
+//     icon: BookOpen,
+//     title: 'Comprehensive Coverage',
+//     description:
+//       'From Primary English to Secondary Humanities, we offer specialized programs for different learning levels and needs.',
+//     highlight: 'Full Curriculum',
+//   },
+// ] as const
 
 const pros = [
   'Maximum 8 students per class',
@@ -126,7 +117,7 @@ const WhyChooseUs = () => {
           </div>
 
           {/* Reasons */}
-          <section className='mt-10 grid w-full grid-cols-1 gap-6 md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr]'>
+          {/* <section className='mt-10 grid w-full grid-cols-1 gap-6 md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr]'>
             {reasons.map((r) => (
               <article
                 key={r.title}
@@ -142,7 +133,7 @@ const WhyChooseUs = () => {
                 <p className='text-sm text-zinc-500'>{r.description}</p>
               </article>
             ))}
-          </section>
+          </section> */}
 
           <section className='mx-auto mt-10 max-w-4xl rounded-lg border border-zinc-300 bg-cream p-8'>
             <h3 className='mb-8 text-center font-heading font-semibold text-2xl'>

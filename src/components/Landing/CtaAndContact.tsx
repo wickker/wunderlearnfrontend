@@ -43,7 +43,7 @@ const CtaAndContact = () => {
           </h2>
 
           <p className='mb-8 text-center text-base text-cream lg:text-lg'>
-            Join Singapore's most exclusive boutique learning community. Limited
+            Join Singapore's most cosy boutique learning community. Limited
             spaces available to maintain our intimate learning environment.
           </p>
 
@@ -103,9 +103,8 @@ const CtaAndContact = () => {
                 Your Success is Our Priority
               </h3>
               <p className='leading-relaxed opacity-90'>
-                Experience the difference that boutique, personalized education
-                can make. Join families across Singapore who have chosen
-                excellence for their children's academic journey.
+                Join families across Singapore who have chosen excellence for
+                their children's academic journey.
               </p>
             </div>
           </div>

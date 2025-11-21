@@ -34,6 +34,30 @@ const reviews: Review[] = [
     relation: 'Secondary X Student',
     imagePath: 'review_4.png',
   },
+  {
+    type: 'Student',
+    name: 'John Wee',
+    relation: 'Secondary X Student',
+    imagePath: 'review_5.png',
+  },
+  {
+    type: 'Student',
+    name: 'Rachelle Tan',
+    relation: 'Secondary X Student',
+    imagePath: 'review_6.png',
+  },
+  {
+    type: 'Student',
+    name: 'Sarah Khoh',
+    relation: 'Secondary X Student',
+    imagePath: 'review_7.png',
+  },
+  {
+    type: 'Student',
+    name: 'Yika',
+    relation: 'Secondary X Student',
+    imagePath: 'review_8.png',
+  },
 ] as const
 
 type ReviewCardProps = {
@@ -42,7 +66,7 @@ type ReviewCardProps = {
 
 const ReviewCard = ({ review }: ReviewCardProps) => {
   return (
-    <article className='relative flex max-h-[96%] flex-col rounded-lg border border-zinc-300 bg-beige px-4 py-8'>
+    <article className='relative flex flex-col rounded-lg border border-zinc-300 bg-beige px-4 py-8 xl:max-h-[96%]'>
       <Chip
         className={cn(
           'mb-3 capitalize',
@@ -60,6 +84,7 @@ const ReviewCard = ({ review }: ReviewCardProps) => {
       <h4 className='font-heading font-medium text-base'>{review.name}</h4>
       <p className='text-xs text-zinc-500'>{review.relation}</p>
 
+      {/* Quote Icon */}
       <div className='-top-3 -left-3 absolute flex h-8 w-8 items-center justify-center rounded-full bg-sage'>
         <Quote className='h-4 w-4 text-white' />
       </div>
@@ -70,6 +95,9 @@ const ReviewCard = ({ review }: ReviewCardProps) => {
 const Reviews = () => {
   const reviewCardsDesktopTop = reviews
     .slice(0, 4)
+    .map((review) => <ReviewCard key={review.name} review={review} />)
+  const reviewCardsDesktopBottom = reviews
+    .slice(4, 8)
     .map((review) => <ReviewCard key={review.name} review={review} />)
 
   return (
@@ -87,21 +115,32 @@ const Reviews = () => {
 
       {/* Carousel (To Left)*/}
       <section className='carousel-mask relative mb-8 hidden h-[640px] w-full overflow-hidden xl:block'>
-        <div className='carousel-animation absolute top-4 left-0 flex h-full w-full items-stretch gap-x-6 pr-3 pl-3'>
+        <div className='carousel-animation-rtl absolute top-4 left-0 flex h-full w-full items-stretch gap-x-6 pr-3 pl-3'>
           {reviewCardsDesktopTop}
         </div>
 
-        <div className='carousel-animation-offset absolute top-4 left-[100%] flex h-full w-full items-stretch justify-around gap-x-6 pr-3 pl-3'>
+        <div className='carousel-animation-offset-rtl absolute top-4 left-[100%] flex h-full w-full items-stretch justify-around gap-x-6 pr-3 pl-3'>
           {reviewCardsDesktopTop}
+        </div>
+      </section>
+
+      {/* Carousel (To Right)*/}
+      <section className='carousel-mask relative mb-8 hidden h-[580px] w-full overflow-hidden xl:block'>
+        <div className='carousel-animation-ltr absolute top-4 left-0 flex h-full w-full items-stretch gap-x-6 pr-3 pl-3'>
+          {reviewCardsDesktopBottom}
+        </div>
+
+        <div className='carousel-animation-offset-ltr absolute top-4 left-[100%] flex h-full w-full items-stretch justify-around gap-x-6 pr-3 pl-3'>
+          {reviewCardsDesktopBottom}
         </div>
       </section>
 
       {/* Mobile */}
       <EntryAnimation>
         <div className='grid grid-cols-1 items-stretch gap-6 md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr] xl:hidden'>
-          {/* {reviews.map((review) => (
+          {reviews.slice(0, 6).map((review) => (
             <ReviewCard key={review.name} review={review} />
-          ))} */}
+          ))}
         </div>
 
         {/* CTA */}

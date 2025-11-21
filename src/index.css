@@ -56,12 +56,20 @@ body {
     @apply flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-sage/10;
   }
 
-  .carousel-animation {
-    animation: scroll-horizontal 30s linear infinite;
+  .carousel-animation-rtl {
+    animation: scroll-horizontal-rtl 30s linear infinite;
   }
 
-  .carousel-animation-offset {
-    animation: scroll-horizontal-offset 30s linear infinite;
+  .carousel-animation-ltr {
+    animation: scroll-horizontal-ltr 30s linear infinite;
+  }
+
+  .carousel-animation-offset-rtl {
+    animation: scroll-horizontal-offset-rtl 30s linear infinite;
+  }
+
+  .carousel-animation-offset-ltr {
+    animation: scroll-horizontal-offset-ltr 30s linear infinite;
   }
 
   .carousel-mask {
@@ -78,7 +86,7 @@ body {
   }
 }
 
-@keyframes scroll-horizontal {
+@keyframes scroll-horizontal-rtl {
   0% {
     left: 0%;
   }
@@ -88,9 +96,29 @@ body {
   }
 }
 
-@keyframes scroll-horizontal-offset {
+@keyframes scroll-horizontal-ltr {
+  0% {
+    left: 0%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes scroll-horizontal-offset-rtl {
   0% {
     left: 100%;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes scroll-horizontal-offset-ltr {
+  0% {
+    left: -100%;
   }
 
   100% {

@@ -1,4 +1,4 @@
-import { Quote } from 'lucide-react'
+import { Quote, Star } from 'lucide-react'
 import { Chip, EntryAnimation } from '@/components/commons'
 import { cn } from '@/utils/functions'
 
@@ -153,13 +153,13 @@ const Reviews = () => {
               Experience the difference that personalized, boutique education
               can make in your academic journey.
             </p>
-            {/* <div className='flex justify-center space-x-2'>
+            <div className='flex justify-center space-x-2'>
               {Array(5)
                 .fill(0)
                 .map((_, i) => (
                   <Star key={i} className='h-5 w-5 fill-current' />
                 ))}
-            </div> */}
+            </div>
             {/* <div className='text-sm opacity-75'>
               Average rating from 50+ families
             </div> */}

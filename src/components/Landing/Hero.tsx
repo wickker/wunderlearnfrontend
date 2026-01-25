@@ -50,9 +50,11 @@ const Hero = () => {
             </h1>
 
             <p className='my-6 text-base lg:text-lg'>
-              Boutique small group classes (max 6-8 students) in our cosy
-              learning space. Join Singapore's most trusted English and
-              Humanities tuition for Primary and Secondary subjects.
+              Boutique small-group tuition in Singapore, with a maximum of 6 to
+              8 students per class in a cosy learning space. We offer trusted
+              English tuition, Humanities tuition, and Junior College General
+              Paper (GP) tuition for Primary, Secondary, and JC students, with
+              personalised feedback and close guidance.
             </p>
 
             <div className='flex flex-col items-center gap-4 lg:flex-row'>

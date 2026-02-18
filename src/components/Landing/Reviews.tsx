@@ -78,7 +78,7 @@ const ReviewCard = ({ review }: ReviewCardProps) => {
       <img
         src={review.imagePath}
         alt={`Wunderlearn review by ${review.name}`}
-        className='h-full w-full object-contain object-top'
+        className='h-full w-full rounded-xl object-cover object-center'
       />
       <div className='my-4 h-[1px] bg-zinc-300' />
       <h4 className='font-heading font-medium text-base'>{review.name}</h4>
@@ -125,7 +125,7 @@ const Reviews = () => {
       </section>
 
       {/* Carousel (To Right)*/}
-      <section className='carousel-mask relative mb-8 hidden h-[580px] w-full overflow-hidden xl:block'>
+      <section className='carousel-mask relative mb-8 hidden h-[640px] w-full overflow-hidden xl:block'>
         <div className='carousel-animation-ltr absolute top-4 left-0 flex h-full w-full items-stretch gap-x-6 pr-3 pl-3'>
           {reviewCardsDesktopBottom}
         </div>

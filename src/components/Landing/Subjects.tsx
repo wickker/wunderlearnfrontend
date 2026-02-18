@@ -16,37 +16,46 @@ const primarySubects: Subject[] = [
     description:
       'Comprehensive language skills development focusing on reading, writing, speaking, and listening',
     keyFocusAreas: [
-      'Grammar & Vocabulary',
-      'Creative Writing',
-      'Comprehension Skills',
-      'Oral Communication',
+      'Grammar & vocabulary',
+      'Creative writing',
+      'Comprehension skills',
+      'Oral communication',
     ],
   },
 ] as const
 
 const secondarySubects: Subject[] = [
   {
-    name: 'English Language & Literature',
+    name: 'English Language',
     color: 'bg-navy-dark',
     description:
-      'Advanced language proficiency and literary analysis for O-Level and N-Level examinations',
+      'Master language skills with focus on synthesis, writing excellence, and oral communication for O-Level and N-Level examinations',
     keyFocusAreas: [
-      'Essay Writing',
-      'Literature Analysis',
-      'Language Paper Techniques',
-      'Oral Examination Prep',
+      'Comprehension & synthesis',
+      'Writing excellence',
+      'Language control',
+      'Oral proficiency',
+    ],
+  },
+  {
+    name: 'Literature',
+    color: 'bg-sage',
+    description:
+      'Develop critical literary analysis skills for deep textual appreciation and examination success',
+    keyFocusAreas: [
+      'Analysis based on the SPECS and SLIMS framework',
+      'Close annotations of prescribed texts',
     ],
   },
   {
     name: 'Humanities',
     description:
-      'Comprehensive coverage of History, Geography, and Social Studies for secondary examinations',
-    color: 'bg-sage',
+      'Build strong analytical and inquiry skills through source-based learning for History, Geography, and Social Studies examinations',
+    color: 'bg-navy-dark',
     keyFocusAreas: [
-      'Historical Analysis',
-      'Geographical Concepts',
-      'Socical Studies Skills',
-      'Source-Based Questions',
+      'Source analysis skills',
+      'Explanation and elaboration',
+      'Develop an inquiry mindset',
     ],
   },
 ] as const
@@ -57,7 +66,7 @@ type SubjectCardProps = {
 
 const SubjectCard = ({ subject }: SubjectCardProps) => {
   return (
-    <article className='group rounded-2xl border border-zinc-300 bg-beige p-8'>
+    <article className='group flex h-full flex-col rounded-2xl border border-zinc-300 bg-beige p-8'>
       <div className={cn(`mb-6 h-2 w-full rounded-t-xl`, subject.color)} />
 
       <div className='space-y-4'>
@@ -74,7 +83,7 @@ const SubjectCard = ({ subject }: SubjectCardProps) => {
                 key={area}
                 className='flex items-center space-x-2 text-sm text-zinc-500'
               >
-                <div className='h-1.5 w-1.5 rounded-full bg-sage' />
+                <div className='aspect-square h-1.5 w-1.5 rounded-full bg-sage' />
                 <span>{area}</span>
               </li>
             ))}
@@ -99,9 +108,9 @@ const Subjects = () => {
         </p>
       </EntryAnimation>
 
-      <div className='grid w-full grid-cols-1 gap-6 lg:grid-cols-[1fr_2fr]'>
+      <div className='grid w-full grid-cols-1 gap-6 lg:grid-cols-[1fr_3fr] lg:items-stretch'>
         {/* Primary Section */}
-        <section>
+        <section className='flex h-full flex-col'>
           <div className='mb-6 flex items-center gap-4'>
             <div className='icon-container'>
               <BookOpen className='h-6 w-6 text-sage' />
@@ -117,7 +126,7 @@ const Subjects = () => {
         </section>
 
         {/* Secondary Section */}
-        <section>
+        <section className='flex h-full flex-col'>
           <div className='mb-6 flex items-center gap-4'>
             <div className='icon-container'>
               <PenTool className='h-6 w-6 text-sage' />
@@ -126,7 +135,7 @@ const Subjects = () => {
               Secondary Level
             </h3>
           </div>
-          <div className='grid grid-cols-1 gap-6 md:grid-cols-[1fr_1fr]'>
+          <div className='grid flex-1 grid-cols-1 gap-6 md:grid-cols-3 md:items-stretch'>
             {secondarySubects.map((s) => (
               <SubjectCard key={s.name} subject={s} />
             ))}

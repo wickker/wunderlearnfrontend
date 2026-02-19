@@ -23,7 +23,7 @@ const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false)
 
   return (
-    <section className='isolate mx-auto grid w-full grid-cols-1 lg:h-[calc(100dvh-72px)]'>
+    <section className='relative isolate mx-auto grid w-full grid-cols-1 lg:h-[calc(100dvh-72px)]'>
       <div className='col-start-1 row-start-1 h-full w-full overflow-hidden'>
         <video
           autoPlay
@@ -89,14 +89,12 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className='z-20 col-start-1 row-start-1 hidden h-full w-full items-end justify-center text-white lg:flex'>
-        <a
-          className='mb-6 animate-bounce hover:cursor-pointer'
-          href='#about-educator'
-        >
-          <ArrowDown className='h-8 w-8' />
-        </a>
-      </div>
+      <a
+        className='absolute bottom-0 z-20 mb-6 hidden w-full animate-bounce justify-center text-white hover:cursor-pointer lg:flex'
+        href='#about-educator'
+      >
+        <ArrowDown className='h-8 w-8' />
+      </a>
     </section>
   )
 }

@@ -1,24 +1,24 @@
 import { CheckCircle, Trophy } from 'lucide-react'
 import { EntryAnimation } from '@/components/commons'
 
-const _metrics = [
-  {
-    label: 'Years MOE Experience',
-    value: '12+',
-  },
-  {
-    label: 'Student Improvement',
-    value: '100%',
-  },
-  {
-    label: 'Max Class Size',
-    value: '8',
-  },
-  {
-    label: 'Success Stories',
-    value: '50+',
-  },
-] as const
+// const _metrics = [
+//   {
+//     label: 'Years MOE Experience',
+//     value: '12+',
+//   },
+//   {
+//     label: 'Student Improvement',
+//     value: '100%',
+//   },
+//   {
+//     label: 'Max Class Size',
+//     value: '8',
+//   },
+//   {
+//     label: 'Success Stories',
+//     value: '50+',
+//   },
+// ] as const
 
 // const reasons = [
 //   {

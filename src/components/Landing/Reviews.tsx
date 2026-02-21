@@ -7,6 +7,7 @@ type Review = {
   name: string
   relation: string
   type: 'Student' | 'Parent'
+  school?: string
 }
 
 const reviews: Review[] = [
@@ -15,42 +16,49 @@ const reviews: Review[] = [
     name: 'Kelly Ko',
     relation: 'Secondary 4 Express',
     imagePath: 'review_1.png',
+    school: 'Canberra Secondary School',
   },
   {
     type: 'Parent',
-    name: 'Adeline Chang',
-    relation: 'Parent of Ryan Chang (Secondary 4 NA)',
+    name: 'Adeline',
+    relation: 'Parent of Ryan Chang, Secondary 4 NA',
     imagePath: 'review_2.png',
-  },
-  {
-    type: 'Student',
-    name: 'Louis Hii',
-    relation: 'Secondary 4 Express',
-    imagePath: 'review_3.png',
+    school: 'Seng Kang Secondary School',
   },
   {
     type: 'Student',
     name: 'Josiah Sim',
     relation: 'Secondary 2 Express',
     imagePath: 'review_4.png',
+    school: 'Anglo Chinese School (Independent)',
   },
   {
     type: 'Student',
-    name: 'John Wee',
-    relation: 'Year 3 IB Diploma',
-    imagePath: 'review_5.png',
-  },
-  {
-    type: 'Student',
-    name: 'Rachelle Tan',
-    relation: 'Secondary X',
-    imagePath: 'review_6.png',
+    name: 'Louis Hii',
+    relation: 'Secondary 4 Express',
+    imagePath: 'review_3.png',
+    school: 'New Town Secondary School',
   },
   {
     type: 'Student',
     name: 'Sarah Khoh',
     relation: 'Secondary 4 Express',
     imagePath: 'review_7.png',
+    school: "Methodist Girls' School",
+  },
+  {
+    type: 'Student',
+    name: 'John Wee',
+    relation: 'Year 3 IB Diploma',
+    imagePath: 'review_5.png',
+    school: 'Anglo Chinese School (Independent)',
+  },
+  {
+    type: 'Student',
+    name: 'Rachelle Tan',
+    relation: 'Secondary 4 Express',
+    imagePath: 'review_6.png',
+    school: "Methodist Girls' School",
   },
   {
     type: 'Student',
@@ -83,6 +91,7 @@ const ReviewCard = ({ review }: ReviewCardProps) => {
       <div className='my-4 h-[1px] bg-zinc-300' />
       <h4 className='font-heading font-medium text-base'>{review.name}</h4>
       <p className='text-xs text-zinc-500'>{review.relation}</p>
+      <p className='text-xs text-zinc-500'>{review.school}</p>
 
       {/* Quote Icon */}
       <div className='-top-3 -left-3 absolute flex h-8 w-8 items-center justify-center rounded-full bg-sage'>

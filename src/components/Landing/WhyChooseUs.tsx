@@ -1,7 +1,7 @@
 import { CheckCircle, Trophy } from 'lucide-react'
 import { EntryAnimation } from '@/components/commons'
 
-const metrics = [
+const _metrics = [
   {
     label: 'Years MOE Experience',
     value: '12+',
@@ -102,7 +102,7 @@ const WhyChooseUs = () => {
           </p>
 
           {/* Metrics */}
-          <div className='grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 md:grid-cols-4'>
+          {/* <div className='grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 md:grid-cols-4'>
             {metrics.map((metric) => (
               <article
                 key={metric.label}
@@ -114,7 +114,7 @@ const WhyChooseUs = () => {
                 <p className='text-sm'>{metric.label}</p>
               </article>
             ))}
-          </div>
+          </div> */}
 
           {/* Reasons */}
           {/* <section className='mt-10 grid w-full grid-cols-1 gap-6 md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr]'>
@@ -171,6 +171,60 @@ const WhyChooseUs = () => {
                     </li>
                   ))}
                 </ul>
+              </article>
+            </div>
+          </section>
+
+          <section className='mx-auto mt-8 w-full max-w-6xl rounded-xl bg-beige-light px-8 py-4'>
+            <div className='flex flex-col items-center gap-3 text-center'>
+              <h3 className='font-heading font-semibold text-3xl'>
+                Awards & Accolades
+              </h3>
+            </div>
+
+            <div className='mt-10 grid grid-cols-1 gap-6 lg:grid-cols-[1.1fr_0.9fr]'>
+              <div className='grid grid-cols-1 gap-6 sm:grid-cols-2'>
+                <article className='flex flex-col gap-4 rounded-xl border border-zinc-200 bg-cream p-5 shadow-premium'>
+                  <div className='bg-(image:--gradient-sage) flex aspect-[1/1.414] w-full items-center justify-center rounded-lg border border-zinc-300 border-dashed text-center text-cream text-xs uppercase tracking-[0.2em]'>
+                    A4 Portrait
+                  </div>
+                  <div>
+                    <h4 className='font-heading font-semibold text-lg'>
+                      Excellence in Teaching
+                    </h4>
+                    <p className='mt-1 text-sm text-zinc-500'>
+                      Placeholder for a portrait certificate.
+                    </p>
+                  </div>
+                </article>
+
+                <article className='flex flex-col gap-4 rounded-xl border border-zinc-200 bg-cream p-5 shadow-premium'>
+                  <div className='bg-(image:--gradient-sage) flex aspect-[1/1.414] w-full items-center justify-center rounded-lg border border-zinc-300 border-dashed text-center text-cream text-xs uppercase tracking-[0.2em]'>
+                    A4 Portrait
+                  </div>
+                  <div>
+                    <h4 className='font-heading font-semibold text-lg'>
+                      MOE Certified Program
+                    </h4>
+                    <p className='mt-1 text-sm text-zinc-500'>
+                      Placeholder for a portrait certificate.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <article className='flex h-full flex-col gap-4 rounded-xl border border-zinc-200 bg-cream p-6 shadow-premium'>
+                <div className='bg-(image:--gradient-sage) flex aspect-[1.414/1] w-full items-center justify-center rounded-lg border border-zinc-300 border-dashed text-center text-cream text-xs uppercase tracking-[0.2em]'>
+                  A4 Landscape
+                </div>
+                <div>
+                  <h4 className='font-heading font-semibold text-lg'>
+                    Innovation in Student Outcomes
+                  </h4>
+                  <p className='mt-1 text-sm text-zinc-500'>
+                    Placeholder for a landscape certificate.
+                  </p>
+                </div>
               </article>
             </div>
           </section>

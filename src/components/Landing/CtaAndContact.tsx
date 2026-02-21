@@ -65,14 +65,14 @@ const CtaAndContact = () => {
           </div>
 
           {/* Urgency Indicator */}
-          <div className='mx-auto flex w-fit justify-center rounded-lg border border-sage/30 bg-sage/20 p-4 backdrop-blur-sm'>
+          {/* <div className='mx-auto flex w-fit justify-center rounded-lg border border-sage/30 bg-sage/20 p-4 backdrop-blur-sm'>
             <div className='flex items-center justify-center space-x-2 text-cream text-sm'>
               <div className='h-2 w-2 animate-pulse rounded-full bg-sage' />
               <span className='font-medium'>
                 Only X spaces left for XXXX intake
               </span>
             </div>
-          </div>
+          </div> */}
 
           {/* Contact Cards */}
           <section className='mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4'>

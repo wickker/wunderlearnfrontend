@@ -1,25 +1,25 @@
 import { ArrowRight, Clock, Mail, MapPin, Phone } from 'lucide-react'
 import { EntryAnimation } from '@/components/commons'
-import { WHATSAPP_LINK } from '@/utils/constants'
+import { CALENDLY_LINK } from '@/utils/constants'
 
 const contacts = [
   {
     icon: Phone,
     label: 'Call Us',
     value: '+65 9XXX XXXX',
-    description: 'Mon-Fri, 9AM - 7PM',
+    description: 'Mon - Fri, 9AM - 10PM',
   },
   {
     icon: Mail,
     label: 'Email Us',
-    value: 'info@wunderlearn.com',
+    value: 'giselle@wunderlearn.com',
     description: 'Response within 24 hours',
   },
   {
     icon: MapPin,
     label: 'Visit Us',
-    value: 'Rivershire, 31 Leonie Hill, Singapore 239229',
-    description: 'Convenient @ Great World MRT',
+    value: 'River Valley',
+    description: 'Sheltered walkway to Great World MRT',
   },
   {
     icon: Clock,
@@ -36,7 +36,7 @@ const CtaAndContact = () => {
       className='flex w-[100dvw] scroll-mt-18 flex-col items-center justify-center bg-navy'
       id='contact'
     >
-      <div className='w-full max-w-5xl px-6 py-18'>
+      <div className='w-full max-w-6xl px-6 py-18'>
         <EntryAnimation>
           <h2 className='mb-8 text-center font-heading text-4xl text-cream lg:text-5xl'>
             Ready to Transform Your Academic Journey?
@@ -56,7 +56,7 @@ const CtaAndContact = () => {
             <a
               className='btn-secondary'
               type='button'
-              href={WHATSAPP_LINK}
+              href={CALENDLY_LINK}
               target='_blank'
               rel='noopener noreferrer'
             >

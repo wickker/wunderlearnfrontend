@@ -185,45 +185,42 @@ const WhyChooseUs = () => {
             <div className='mt-10 grid grid-cols-1 gap-6 lg:grid-cols-[1.1fr_0.9fr]'>
               <div className='grid grid-cols-1 gap-6 sm:grid-cols-2'>
                 <article className='flex flex-col gap-4 rounded-xl border border-zinc-200 bg-cream p-5 shadow-premium'>
-                  <div className='bg-(image:--gradient-sage) flex aspect-[1/1.414] w-full items-center justify-center rounded-lg border border-zinc-300 border-dashed text-center text-cream text-xs uppercase tracking-[0.2em]'>
-                    A4 Portrait
-                  </div>
+                  <img
+                    src='cert.jpg'
+                    alt='Commonwealth Essay Competition 2023'
+                    className='h-auto w-full rounded-2xl'
+                  />
                   <div>
                     <h4 className='font-heading font-semibold text-lg'>
-                      Excellence in Teaching
+                      The Queen's Commonwealth Essay Competition 2023
                     </h4>
-                    <p className='mt-1 text-sm text-zinc-500'>
-                      Placeholder for a portrait certificate.
-                    </p>
                   </div>
                 </article>
 
                 <article className='flex flex-col gap-4 rounded-xl border border-zinc-200 bg-cream p-5 shadow-premium'>
-                  <div className='bg-(image:--gradient-sage) flex aspect-[1/1.414] w-full items-center justify-center rounded-lg border border-zinc-300 border-dashed text-center text-cream text-xs uppercase tracking-[0.2em]'>
-                    A4 Portrait
-                  </div>
+                  <img
+                    src='cert2.jpg'
+                    alt='Commonwealth Essay Competition 2024'
+                    className='h-auto w-full rounded-2xl'
+                  />
                   <div>
                     <h4 className='font-heading font-semibold text-lg'>
-                      MOE Certified Program
+                      The Queen's Commonwealth Essay Competition 2024
                     </h4>
-                    <p className='mt-1 text-sm text-zinc-500'>
-                      Placeholder for a portrait certificate.
-                    </p>
                   </div>
                 </article>
               </div>
 
               <article className='flex h-full flex-col gap-4 rounded-xl border border-zinc-200 bg-cream p-6 shadow-premium'>
-                <div className='bg-(image:--gradient-sage) flex aspect-[1.414/1] w-full items-center justify-center rounded-lg border border-zinc-300 border-dashed text-center text-cream text-xs uppercase tracking-[0.2em]'>
-                  A4 Landscape
-                </div>
+                <img
+                  src='cert_landscape.jpeg'
+                  alt='Goi Peace Foundation International Essay Contest 2022'
+                  className='h-auto w-full rounded-2xl'
+                />
                 <div>
                   <h4 className='font-heading font-semibold text-lg'>
-                    Innovation in Student Outcomes
+                    The Goi Peace Foundation International Essay Contest 2022
                   </h4>
-                  <p className='mt-1 text-sm text-zinc-500'>
-                    Placeholder for a landscape certificate.
-                  </p>
                 </div>
               </article>
             </div>

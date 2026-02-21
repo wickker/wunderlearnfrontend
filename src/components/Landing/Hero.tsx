@@ -1,7 +1,7 @@
 import { ArrowDown, ArrowRight } from 'lucide-react'
 import { useState } from 'react'
 import { EntryAnimation } from '@/components/commons'
-import { WHATSAPP_LINK } from '@/utils/constants'
+import { CALENDLY_LINK } from '@/utils/constants'
 import { cn } from '@/utils/functions'
 
 const statistics = [
@@ -66,7 +66,7 @@ const Hero = () => {
               <a
                 className='btn-secondary'
                 type='button'
-                href={WHATSAPP_LINK}
+                href={CALENDLY_LINK}
                 target='_blank'
                 rel='noopener noreferrer'
               >
